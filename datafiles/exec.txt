@@ -1,0 +1,2 @@
+print Welcome to GunFire!
+print We Hope You enjoyed game.

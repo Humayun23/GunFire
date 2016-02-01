@@ -1,0 +1,8 @@
+"appsurface" "0"
+"light"      "0"
+"datwin"    "0"
+"light_int_mult" "1"
+"tbots"     "6"
+"ctbots"    "5"
+"blood"     "1"
+"logo"      "1"
