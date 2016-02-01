@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//IP_deg=get_string_async("Enter ip:","127.0.0.1");
+            <string>///Try to Connect to server
+//IP_deg=get_string_async("Enter ip:","127.0.0.1");
 
 var IP  ="127.0.0.1"; //async_load[? "result"];
 

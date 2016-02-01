@@ -1418,7 +1418,6 @@
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\Custom Minimap</extension>
-    <extension index="1">extensions\Color Coding Files</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_ct_win</sound>
