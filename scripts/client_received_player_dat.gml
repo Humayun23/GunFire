@@ -1,0 +1,12 @@
+buffer=argument[0];
+/*var xx = buffer_read( buffer , buffer_u16 );
+var yy = buffer_read( buffer , buffer_u16 );
+var dir = buffer_read( buffer , buffer_u16 );
+var wp_id = buffer_read (buffer, buffer_u8 );
+var ft_index = buffer_read(buffer,buffer_u8 );
+global.__ping = current_time-global.__time; 
+obj_Player.x=xx;
+obj_Player.y=yy;
+obj_Player.direction = dir;
+obj_Player.foot_index = ft_index/10;
+obj_Player.weaponid = wp_id;*/
