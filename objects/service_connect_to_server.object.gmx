@@ -71,7 +71,8 @@ if (isConnected&lt;0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>   var type_event = ds_map_find_value( async_load , "type" );
+            <string>////Detect Data sent from server
+      var type_event = ds_map_find_value( async_load , "type" );
    switch( type_event ) {
       case network_type_data:
       var buffer = ds_map_find_value( async_load , "buffer" );
