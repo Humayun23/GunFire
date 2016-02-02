@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0;
+            <string>//
+image_speed=0;
 sprite_index=spr_player_0;
 show_debug_message("Dummie Created");
 foot_index=0;
