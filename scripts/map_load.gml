@@ -24,7 +24,6 @@ if (header!="#GunFireMap#") {show_message("Map is not valid! See console for mor
 buffer_delete(buff) 
 con_add("Error! Cant Load Map header doesnot match("+string(header)+") return value of 'buff':"+string(buff),c_red);
 return -1;
-
 }
 //first code
 version = buffer_read(buff,buffer_u16);
