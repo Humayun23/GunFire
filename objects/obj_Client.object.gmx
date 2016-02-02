@@ -25,13 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.requested!=false)
+            <string>
+if (global.requested == true)
 {
-global.requested=true;
+global.requested=false;
 buffer_seek(Buffer,buffer_seek_start,0);
 buffer_write(Buffer,buffer_u8,5); //Request data
 network_send_packet(Socket,Buffer,buffer_tell(Buffer));
 }
+
+if !global.toserver instance_destroy(); //if not connected to server destroy.
 </string>
           </argument>
         </arguments>
@@ -54,7 +57,8 @@ network_send_packet(Socket,Buffer,buffer_tell(Buffer));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_Player){
+            <string>{
+if instance_exists(obj_Player){
    buffer_seek( Buffer , buffer_seek_start , 0 );
    buffer_write( Buffer , buffer_u8 , 2 ); //Player Data
    buffer_write( Buffer , buffer_s32 , obj_Player.x );
@@ -79,6 +83,7 @@ network_send_packet(Socket,Buffer,buffer_tell(Buffer));
    buffer_write( Buffer , buffer_s32 , -1 );
    
    Result = network_send_packet( Socket , Buffer , buffer_tell( Buffer ) );
+   }
    }
 </string>
           </argument>
@@ -154,9 +159,10 @@ network_send_packet(Socket,Buffer,buffer_tell(Buffer));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>   draw_set_color( c_white );
-   draw_text(view_xview + view_wview-200 ,view_yview + 5  , "Connected: " + string( Result &gt;= 0 ) );
-   draw_text(view_xview + view_wview-200 ,view_yview + 20 , "My Ping: "   + string( Ping ) );
+            <string>
+//draw_set_color( c_white );
+//   draw_text(view_xview + view_wview-200 ,view_yview + 5  , "Connected: " + string( Result &gt;= 0 ) );
+ //  draw_text(view_xview + view_wview-200 ,view_yview + 20 , "My Ping: "   + string( Ping ) );
 </string>
           </argument>
         </arguments>

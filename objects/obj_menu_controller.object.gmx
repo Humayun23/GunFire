@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>global.requested = false;
+global.toserver=false;
+
 texture_set_interpolation(true);
 //box=create_tick(24,114,0,"Lighting");
 //box.tick=true;

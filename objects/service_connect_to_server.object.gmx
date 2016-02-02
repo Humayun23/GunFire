@@ -35,6 +35,7 @@ log_add("Connecting to server using ip:"+string(IP))
 global.mplay_dat=ds_map_create();
 global.mplay_dat[? "status"]=0;
 
+global.toserver=false;
 
 globalvar Socket,Buffer,Ping,Result;
 Socket = network_create_socket( network_socket_tcp );
@@ -86,6 +87,7 @@ if (isConnected&lt;0)
        {
        global.mplay_dat[" map"]=_map;
        global.lastmap=global.g_dir+"maps\"+string(_map);
+       global.toserver=true;
        map_load(global.g_dir+"maps\"+string(_map));
        };
        break;
