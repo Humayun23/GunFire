@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Test
+            <string>///Testoo
 if (global.requested == true)
 {
 global.requested=false;
