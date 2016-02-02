@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>texture_set_interpolation(true);
+            <string>global.requested = false;
+texture_set_interpolation(true);
 //box=create_tick(24,114,0,"Lighting");
 //box.tick=true;
 //map_load_cs2d("");
@@ -87,7 +88,7 @@ if (global._CREATE_JSBT)
 instance_create(128,256,obj_CreateServer);
 }
 global.lastmap="[]";
-global.requested = false;
+
 //post=http_post_string(website+"/file_upload.php","myfile=tmp"+"&amp;name=tmp");
 
 </string>

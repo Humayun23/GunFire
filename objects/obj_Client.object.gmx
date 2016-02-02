@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.requested==false)
+            <string>if (global.requested!=false)
 {
 global.requested=true;
 buffer_seek(Buffer,buffer_seek_start,0);
