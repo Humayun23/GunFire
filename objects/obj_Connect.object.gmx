@@ -29,7 +29,7 @@
 color_normal = c_gray;
 image_blend = color_normal;
 color_click  = c_white;
-str="Start Bot Game";
+str="Connect";
 global.fogofwar=false;
 sprite_index=spr_Button_menu;
 
