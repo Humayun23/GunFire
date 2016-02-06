@@ -1,5 +1,8 @@
+///map_load(string mapname)
+//--Map name with directory .. relative or full path acceptable.
 //global.__map_to_load=argument0;
 //room_goto(rm_map_loading);
+
 _dir=argument0;
 
 globalvar bck_tile,fog_color,fog_density;
@@ -8,7 +11,9 @@ con_add("Loading map :"+string(filename_name(argument0)),c_yellow);
 fog_color=c_black;
 fog_density=0;
 bck_tile=-1;
-global.rm = room_duplicate(rm_temp);
+//--------------------------------------------
+global.rm = room_duplicate(rm_temp);  // room_duplicate memory leak . increase memory after loading map again again.
+//---------------------------------------------
 //if (room==rm_temp)
 //{
 //with (o_Entities) instance_destroy();
@@ -19,9 +24,10 @@ if (file_exists(_dir))
 {
 globalvar buff;
 buff=buffer_load(_dir);
+if buff<0 {con_add("[Unkown Error] buffer return <0 value, return value:"+string(buff),c_red); buffer_delete(buff); show_message("Unkown error! See console for more info.") return -1;}
 header= buffer_read(buff,buffer_string);
 if (header!="#GunFireMap#") {show_message("Map is not valid! See console for more info.")
-buffer_delete(buff) 
+buffer_delete(buff)
 con_add("Error! Cant Load Map header doesnot match("+string(header)+") return value of 'buff':"+string(buff),c_red);
 return -1;
 }
@@ -29,7 +35,7 @@ return -1;
 version = buffer_read(buff,buffer_u16);
 show_debug_message(version);
 if (version<110 or version>1000) //if old map -not recommanded"
-{ 
+{
 show_debug_message("Old Map!");
 buffer_delete(buff);
 map_load_old(_dir);
@@ -47,18 +53,18 @@ rm_height=buffer_read(buff,buffer_u16);
 room_set_width(global.rm,rm_width);
 room_set_height(global.rm,rm_height);
 
-for (i=1;i<=8;i++) buffer_read(buff,buffer_u16);
+for (i=1;i<=8;i++) buffer_read(buff,buffer_u16); //repeat 8 times-- Empty or useless in this format.
 
 tile_file=buffer_read(buff,buffer_string);
 tileinf=buffer_read(buff,buffer_string);
 for (i=1;i<=13;i++) buffer_read(buff,buffer_string);
 
-//other data
+//other data integer 16 -ve and +ve
 fog_density = buffer_read(buff,buffer_s16)/10;
 fog_color = buffer_read(buff,buffer_s16);
 for (i=1;i<=8;i++) buffer_read(buff,buffer_s16);
 
-//entities
+//entities -- or objects
 t_entities=buffer_read(buff,buffer_u16)
 show_debug_message("Entities:"+string(t_entities));
 for (i=1;i<=t_entities;i++)
@@ -71,6 +77,7 @@ for (a=1;a<=7;a++){
 dat[a]=buffer_read(buff,buffer_s16);
 }
 
+//Create entities
 //show_debug_message("type:"+string(type));
 switch (type)
   {
@@ -84,7 +91,7 @@ switch (type)
 
 
 
-
+///Check tile file if exists.
 if (file_exists(global.g_dir+"gfx/tiles/"+tile_file))
   {
   bck_tile=background_add(global.g_dir+"gfx/tiles/"+tile_file,0,0);
@@ -92,13 +99,14 @@ if (file_exists(global.g_dir+"gfx/tiles/"+tile_file))
   else
   {
   show_message("Tile FIle not exists:"+string(global.g_dir+"gfx/tiles/"+tile_file));
+  con_add("[Error] Tile file for map not exists, path:"+string(global.g_dir+"gfx/tiles/"+tile_file),c_red)
   buffer_delete(buff);
   return -1;
   }
 
-
+///Count total tiles
 t_tiles=buffer_read(buff,buffer_u32);
-
+///Loop tiles and load tiles data.
 for (i=1;i<=t_tiles;i++)
 {
 left=buffer_read(buff,buffer_s16);
@@ -111,12 +119,12 @@ room_tile_add(global.rm,bck_tile,left,top,32,32,xx,yy,dpth);
 }
 buffer_delete(buff);
 //room_change(global.rm,obj_Player);
-
+//------------------------Done loading map here
 room_goto(global.rm);
 }
 else
 {
 con_add("Error: File not exists("+string(argument0)+").Map not loaded!",c_red);
-show_message_async("An error accur while loading map please see console for more info!");
+show_message("An error accur while loading map please see console for more info!");
 return -1;
 }
