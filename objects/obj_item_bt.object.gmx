@@ -35,8 +35,8 @@ item=-1;
 index=0;
 
 colour=c_black;
-width=120;
-height=32;
+width=120*2;
+height=75;
 </string>
           </argument>
         </arguments>

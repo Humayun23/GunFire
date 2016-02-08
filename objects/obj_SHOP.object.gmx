@@ -141,21 +141,21 @@ instance_destroy();
             <string>for (c=1;c&lt;=ii;c+=1)
 {
 if (c&lt;=6){
-bt[c].x=view_xview+40;
-bt[c].y=view_yview+(100+(40*(c-1)));
+bt[c].x=view_xview+80;
+bt[c].y=view_yview+(100+(80*(c-1)));
 }
 else{
-bt[c].x=view_xview+40+130;
-bt[c].y=view_yview+(100+(40*((c-7))));
+bt[c].x=view_xview+80+260;
+bt[c].y=view_yview+(100+(80*((c-7))));
 }
 }
-bt_close.x=view_xview+40;
-bt_close.y=view_yview+(100+(40*7));
-bt_buy.x=view_xview+(view_wview-250);
-bt_buy.y=view_yview+(100+(40*7));
+bt_close.x=view_xview+80;
+bt_close.y=view_yview+(100+(80*7));
+bt_buy.x=view_xview+(view_wview-500);
+bt_buy.y=view_yview+(100+(80*7));
 
-bt_ammo.x=view_xview+(view_wview-250);
-bt_ammo.y=view_yview+(100+(40*7));
+bt_ammo.x=view_xview+(view_wview-500);
+bt_ammo.y=view_yview+(100+(80*7));
 
 </string>
           </argument>
@@ -189,19 +189,19 @@ draw_sprite_stretched(spr_big_window,1,0,0,(view_wview),(view_hview));
 //draw_rectangle_colour(96,96,96+(view_wview-96*2),96+(view_hview-96*2),c_black,c_black,c_black,c_black,1);
 
 draw_set_alpha(1);
-draw_rectangle_colour(view_wview-290,96,view_wview-60,210,c_white,c_white,c_white,c_white,0);
-draw_rectangle_colour(view_wview-290,96,view_wview-60,210,c_black,c_black,c_black,c_black,1);
-draw_rectangle_colour(view_wview-291,95,view_wview-59,211,c_black,c_black,c_black,c_black,1);
-draw_rectangle_colour(view_wview-292,94,view_wview-58,212,c_black,c_black,c_black,c_black,1);
+draw_rectangle_colour(view_wview-290*2,96*2,view_wview-120,420,c_white,c_white,c_white,c_white,0);
+draw_rectangle_colour(view_wview-290*2,96*2,view_wview-120,421,c_black,c_black,c_black,c_black,1);
+draw_rectangle_colour(view_wview-291*2,95*2,view_wview-118,422,c_black,c_black,c_black,c_black,1);
+draw_rectangle_colour(view_wview-292*2,94*2,view_wview-116,423,c_black,c_black,c_black,c_black,1);
 draw_set_alpha(1);
 if (global.__selected_item!=-1)
 {
 //draw_set_blend_mode(bm_subtract);
-draw_sprite(ItemDat[global.__selected_item,12],-1,view_wview-((290+60)/2),(210+96)/2); //hud image
+draw_sprite(ItemDat[global.__selected_item,12],-1,view_wview-((580+120)/2),(420+192)/2); //hud image
 //draw_set_blend_mode(bm_normal);
 draw_set_colour(c_white);
 draw_set_font(fnt_arial);
-draw_text(view_wview-220,(view_hview/2)-25,"Name:"+ItemDat[global.__selected_item,0]+
+draw_text(view_wview-440,(view_hview/2)+25,"Name:"+ItemDat[global.__selected_item,0]+
 "#Price:"+string(ItemDat[global.__selected_item,3])+"#Damage:"+string(ItemDat[global.__selected_item,7])+
 "#FireRate:"+string(ItemDat[global.__selected_item,6]));
 }

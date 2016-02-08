@@ -1,3 +1,4 @@
+///con_init()
 global.con_com_list = ds_list_create();
 ds_list_add(global.con_com_list,"print");
 ds_list_add(global.con_com_list,"exec");

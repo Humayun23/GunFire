@@ -52,7 +52,7 @@ image_speed=0;
           <argument>
             <kind>1</kind>
             <string>x=view_xview+(view_wview-sprite_xoffset);
-y=view_yview+(view_hview/2)-100;
+y=view_yview+(view_hview/2)-200;
 
 if (!instance_exists(obj_Player))
 {
@@ -178,7 +178,7 @@ show_debug_message("ok");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,(view_wview-sprite_xoffset),(view_hview/2)-100,1,1,0,c_white,1);
+            <string>draw_sprite_ext(sprite_index,image_index,(view_wview-sprite_xoffset),(view_hview/2)-200,1,1,0,c_white,1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_arial);
@@ -186,7 +186,7 @@ var c;
 if (instance_exists(obj_Player)){
 if (obj_Player.torch) c=c_yellow; else c=c_black;
 //draw_text_colored((view_wview-sprite_xoffset),(view_hview/2)-100,18,"F");
-draw_sprite_ext(spr_flash_ico,0,view_wview-sprite_xoffset,(view_hview/2)-100,1,1,0,c,1);
+draw_sprite_ext(spr_flash_ico,0,view_wview-sprite_xoffset,(view_hview/2)-200,1,1,0,c,1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 }

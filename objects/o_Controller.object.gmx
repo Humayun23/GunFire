@@ -140,7 +140,7 @@ map_load(global.lastmap);
           <argument>
             <kind>1</kind>
             <string>///Winning
-if (global.ct_no&lt;=0)
+/*if (global.ct_no&lt;=0)
 {
 to_draw="Terr Wins!";
 count++;
@@ -193,7 +193,7 @@ room_goto(rm_menu);
 }
 }
 
-
+*/
 
 if (instance_exists(obj_Player))
 if (os_type==os_windows)
@@ -590,22 +590,22 @@ draw_rectangle_colour(0,0,view_wview,52,c,c,c,c,1);
 
 if (instance_exists(obj_Player)){
 draw_set_blend_mode(bm_add);
-draw_sprite_ext(spr_HudElements,0,(view_wview/2)-100,view_hview-(25),1,1,0,c_yellow,1);
+draw_sprite_ext(spr_HudElements,0,(view_wview/2)-200,view_hview-(50),1,1,0,c_yellow,1);
 
 draw_set_font(global.fnt_numbers);
-draw_text_colour((view_wview/2)-70,view_hview-40,string(round(obj_Player.hp)),c_yellow,c_yellow,c_yellow,c_yellow,1);
-draw_text_colour((view_wview/2)+50,view_hview-40,string(round(ds_grid_get(obj_Player.weapondata,ItemDat[obj_Player.weaponid,10],2)))+";"+string(round(ds_grid_get(obj_Player.weapondata,ItemDat[obj_Player.weaponid,10],1))),c_yellow,c_yellow,c_yellow,c_yellow,1);
+draw_text_colour((view_wview/2)-140,view_hview-80,string(round(obj_Player.hp)),c_yellow,c_yellow,c_yellow,c_yellow,1);
+draw_text_colour((view_wview/2)+100,view_hview-80,string(round(ds_grid_get(obj_Player.weapondata,ItemDat[obj_Player.weaponid,10],2)))+";"+string(round(ds_grid_get(obj_Player.weapondata,ItemDat[obj_Player.weaponid,10],1))),c_yellow,c_yellow,c_yellow,c_yellow,1);
 draw_set_blend_mode(bm_normal);
 ///--- End of Hud Items----
 with (obj_Player)
 {
-draw_sprite(spr_pointer,0,x+lengthdir_x(100,image_angle)-view_xview,y+lengthdir_y(100,image_angle)-view_yview);
+draw_sprite(spr_pointer,0,x+lengthdir_x(200,image_angle)-view_xview,y+lengthdir_y(200,image_angle)-view_yview);
 }
 }
 draw_set_font(fnt_arial);
 draw_set_alpha(1);
 if (!instance_exists(obj_SHOP)){
-script_drawlines(16,(view_hview/2)-50);}
+script_drawlines(16,(view_hview/2)-100);}
 
 if to_draw!=""
 {
@@ -614,7 +614,7 @@ draw_set_colour(c_white);
 draw_set_alpha(1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text((view_wview/2),25,to_draw);
+draw_text((view_wview/2),50,to_draw);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(1);
@@ -627,9 +627,9 @@ if (reloading==true)
 {
 if (ds_grid_get(weapondata,1,1)&gt;0){
 draw_set_alpha(0.65);
-draw_rectangle_colour((x-50)-view_xview,(y-70)-view_yview,(x+(ds_grid_get(weapondata,ItemDat[weapondata,10],2)/ItemDat[weaponid,4])*100)-view_xview,(y-50)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,0);
+draw_rectangle_colour((x-100)-view_xview,(y-140)-view_yview,(x+(ds_grid_get(weapondata,ItemDat[weapondata,10],2)/ItemDat[weaponid,4])*100)-view_xview,(y-100)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,0);
 draw_set_alpha(1);
-draw_rectangle_colour((x-50)-view_xview,(y-70)-view_yview,(x+100)-view_xview,(y-50)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,1);
+draw_rectangle_colour((x-100)-view_xview,(y-140)-view_yview,(x+200)-view_xview,(y-100)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,1);
 }
 }
 }

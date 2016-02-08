@@ -52,7 +52,7 @@ image_speed=0;
           <argument>
             <kind>1</kind>
             <string>x=view_xview+(75);
-y=view_yview+(view_hview/2)-50;
+y=view_yview+(view_hview/2)-100;
 </string>
           </argument>
         </arguments>

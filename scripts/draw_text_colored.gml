@@ -20,14 +20,13 @@ str=string_delete(str,pos,2)
 //and so on
 switch (str2)
 {
-case "red" : str3=c_red; break;
+case "red"  :str3=c_red; break;
 case "blue" :str3=c_blue;break;
-case "white": str3=c_white;break;
+case "white":str3=c_white;break;
 case "black":str3=c_black;break;
 //case "\#":str2="\#"
-default : str3=real(str2);break;
+default :str3 = real(str2);break;
 }
-
 draw_set_color(real(str3))
 if str2=="\n"
 {draw_text(xx,yy,string_copy(str,1,pos-1))

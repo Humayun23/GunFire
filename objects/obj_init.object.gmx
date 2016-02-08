@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>global.lighting = ds_map_find_value(global.settings_map,"light");
 fog_density *= ds_map_find_value(global.settings_map,"light_int_mult")
-for (xx=0;xx&lt;=room_width;xx+=32)
-for (yy=0;yy&lt;=room_height;yy+=32){
+for (xx=0;xx&lt;=room_width;xx+=64)
+for (yy=0;yy&lt;=room_height;yy+=64){
 if tile_layer_find(-5,xx,yy)
 instance_create(xx,yy,oSolid);
 else
@@ -42,7 +42,7 @@ instance_create(xx,yy,obj_ground);
 if (instance_exists(o_CTSpawn))
 instance_create(o_CTSpawn.x,o_CTSpawn.y,obj_Player);
 
-if (instance_exists(o_CTSpawn)){
+/*if (instance_exists(o_CTSpawn)){
 repeat (ds_map_find_value(global.settings_map,"ctbots")){
 with instance_create(o_CTSpawn.x,o_CTSpawn.y,obj_ai_unit) team=0;
 global.ct_no+=1;}
@@ -127,7 +127,7 @@ instance_create(0,0,obj_shadow_surf);
             <string>draw_set_colour(c_red);
 draw_set_font(fnt_arial);
 draw_set_alpha(1);
-draw_text(0,130,string(fps)+"|"+string(fps_real));
+draw_text(0,260,string(fps)+"|"+string(fps_real));
 //draw_text(0,15,"Build : Ver "+string(GM_version)+" Demo Release.");
 //draw_text(0,30,string(global.__ping)+"ms");
 draw_set_colour(c_white);

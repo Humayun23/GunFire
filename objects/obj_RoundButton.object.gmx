@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xx=(view_xview+100);
-yy=(view_yview+(view_hview-100));
+            <string>xx=(view_xview+(100*2));
+yy=(view_yview+(view_hview-(100*2)));
 
 x=xx;
 y=yy;
@@ -82,8 +82,8 @@ y=yy;
           <argument>
             <kind>1</kind>
             <string>///set position
-xx=(view_xview+100);
-yy=(view_yview+(view_hview-100));
+xx=(view_xview+(100*2));
+yy=(view_yview+(view_hview-(100*2)));
 </string>
           </argument>
         </arguments>
@@ -139,8 +139,7 @@ for( DeviceNum = 0; DeviceNum &lt;=4; DeviceNum += 1; )
         if( distance_to_point(MouseX[DeviceNum], MouseY[DeviceNum])&lt;30 )
         {
         if (point_distance(xx,yy,MouseX[DeviceNum],MouseY[DeviceNum])&lt;100){
-
-          {
+         {
           
           image_alpha=1;
 //          image_angle = point_direction(xx,yy,x,y);

@@ -10,6 +10,7 @@ if argument0<=total_tiles
 {
 top=0;
 left=0;
+var ii;
 for (ii=1;ii < argument0;ii+=1)
 {
 if (left*gridsize) = (background_get_width(argument3)-gridsize)

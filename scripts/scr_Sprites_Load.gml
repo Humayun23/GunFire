@@ -77,7 +77,7 @@ set_center_origin(spr_mask );
 
 spr_msgbox= sprite_add(dir+"/msgbox.png",0,0,0,0,0);
 
-spr_player_0 = sprite_add(dir+"/player_0.png",3,0,0,14,16);
+spr_player_0 = sprite_add(dir+"/player_0.png",3,0,0,14*2,16*2);
 
 spr_player_1= sprite_add(dir+"/player_1.png",3,0,0,14,16);
 
@@ -133,18 +133,18 @@ set_center_origin(spr_d_usp);
 spr_d_knife= sprite_add(dir+"/weapons/knife.png",1,0,0,0,0);
 set_center_origin(spr_d_knife);
 
-spr_ak47= sprite_add(dir+"/weapons/ak47.png",1,0,0,0,15);
-spr_m4a1= sprite_add(dir+"/weapons/m4a1.png",1,0,0,0,15);
-spr_aug= sprite_add(dir+"/weapons/aug.png",1,0,0,0,15);
-spr_m3= sprite_add(dir+"/weapons/m3.png",1,0,0,0,15);
-spr_ump45= sprite_add(dir+"/weapons/ump45.png",1,0,0,0,15);
-spr_mp5= sprite_add(dir+"/weapons/mp5.png",1,0,0,0,15);
+spr_ak47= sprite_add(dir+"/weapons/ak47.png",1,0,0,0,30);
+spr_m4a1= sprite_add(dir+"/weapons/m4a1.png",1,0,0,0,30);
+spr_aug= sprite_add(dir+"/weapons/aug.png",1,0,0,0,30);
+spr_m3= sprite_add(dir+"/weapons/m3.png",1,0,0,0,30);
+spr_ump45= sprite_add(dir+"/weapons/ump45.png",1,0,0,0,30);
+spr_mp5= sprite_add(dir+"/weapons/mp5.png",1,0,0,0,30);
 ///-pistols
-spr_deagle= sprite_add(dir+"/weapons/deagle.png",1,0,0,-2,15);
-spr_glock= sprite_add(dir+"/weapons/glock.png",1,0,0,-2,15);
-spr_usp= sprite_add(dir+"/weapons/usp.png",1,0,0,-2,15);
+spr_deagle= sprite_add(dir+"/weapons/deagle.png",1,0,0,-4,30);
+spr_glock= sprite_add(dir+"/weapons/glock.png",1,0,0,-4,30);
+spr_usp= sprite_add(dir+"/weapons/usp.png",1,0,0,-4,30);
 
-spr_knife= sprite_add(dir+"/weapons/deagle.png",1,0,0,-5,15);
+spr_knife= sprite_add(dir+"/weapons/deagle.png",1,0,0,-10,30);
 
 //Hud
 spr_hud_ak47  =  sprite_add(dir+"/weapons/hud_ak47.png",1,0,0,0,0);

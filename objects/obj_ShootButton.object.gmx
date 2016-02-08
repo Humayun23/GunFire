@@ -104,8 +104,8 @@ y=yy;
             <kind>1</kind>
             <string>//set position and detect mouse...
 if (instance_exists(obj_Player)){
-xx=(view_xview[0]+(view_wview[0]-(100)));
-yy=(view_yview[0]+(view_hview[0]-100));
+xx=(view_xview[0]+(view_wview[0]-(100*2)));
+yy=(view_yview[0]+(view_hview[0]-(100*2)));
 
 
 
@@ -157,7 +157,7 @@ for( DeviceNum = 0; DeviceNum &lt;=4; DeviceNum += 1; )
       {
          //x=xx;
         //y=yy;
-       mp_linear_step_object(xx,yy,6,noone);
+       mp_linear_step_object(xx,yy,12,noone);
        //sprite_index=spr_joystick;
     //   image_alpha=0.8;
        }
@@ -186,7 +186,7 @@ for( DeviceNum = 0; DeviceNum &lt;=4; DeviceNum += 1; )
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_round_button,-1,((view_wview[0]-100)),((view_hview[0]-100)),1,1,0,c_white,1);
+            <string>draw_sprite_ext(spr_round_button,-1,((view_wview[0]-(100*2))),((view_hview[0]-(100*2))),1,1,0,c_white,1);
 draw_sprite_ext(sprite_index,-1,x-view_xview,y-view_yview,1,1,image_angle,c_white,image_alpha);
 </string>
           </argument>

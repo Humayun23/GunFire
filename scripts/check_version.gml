@@ -1,4 +1,4 @@
-///input as string...
+///check_version(string)
 str=string(argument0)+".";
 
 str_pos = 1;
@@ -7,7 +7,7 @@ str_temp = "";
 
 while(str_pos < string_length(str))
     {
-    
+
     while (string_char_at(str, str_pos) != ".")
         {
         str_temp += string_char_at(str, str_pos);

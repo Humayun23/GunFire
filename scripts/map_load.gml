@@ -36,9 +36,10 @@ version = buffer_read(buff,buffer_u16);
 show_debug_message(version);
 if (version<110 or version>1000) //if old map -not recommanded"
 {
-show_debug_message("Old Map!");
+con_add("Old Map!",c_red);
+show_message("Old map and not supported!");
 buffer_delete(buff);
-map_load_old(_dir);
+//map_load_old(_dir);
 return -1;
 exit;
 }
@@ -115,7 +116,7 @@ dpth = buffer_read(buff,buffer_s16);
 xx= buffer_read(buff,buffer_s16);
 yy= buffer_read(buff,buffer_s16);
 for (a=1;a<=5;a++) buffer_read(buff,buffer_s16);
-room_tile_add(global.rm,bck_tile,left,top,32,32,xx,yy,dpth);
+room_tile_add(global.rm,bck_tile,left,top,64,64,xx,yy,dpth);
 }
 buffer_delete(buff);
 //room_change(global.rm,obj_Player);

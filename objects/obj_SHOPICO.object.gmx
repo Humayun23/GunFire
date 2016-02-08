@@ -70,7 +70,7 @@ else
 visible=false;
 
 x=view_xview+sprite_xoffset;
-y=view_yview+(view_hview/2)-50;
+y=view_yview+(view_hview/2)-100;
 
 </string>
           </argument>
@@ -170,14 +170,14 @@ instance_create(x,y,obj_SHOP);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,image_index,sprite_xoffset,(view_hview/2)-50,1,1,0,c_white,1);
+            <string>draw_sprite_ext(sprite_index,image_index,sprite_xoffset,(view_hview/2)-100,1,1,0,c_white,1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_arial);
 
 //draw_text_colored(sprite_xoffset,(view_hview/2)-100,18,"S");
 draw_set_blend_mode(bm_subtract);
-draw_sprite_ext(spr_HudElements,4,sprite_xoffset,(view_hview/2)-50,1,1,0,c_white,1);
+draw_sprite_ext(spr_HudElements,4,sprite_xoffset,(view_hview/2)-100,1,1,0,c_white,1);
 draw_set_blend_mode(bm_normal);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

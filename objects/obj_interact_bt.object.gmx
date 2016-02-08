@@ -79,8 +79,8 @@ touch=true;
           <argument>
             <kind>1</kind>
             <string>
-x=(view_xview[0]+(view_wview[0]-(50)));
-y=(view_yview[0]+(view_hview[0]-260));
+x=(view_xview[0]+(view_wview[0]-(100)));
+y=(view_yview[0]+(view_hview[0]-520));
 </string>
           </argument>
         </arguments>

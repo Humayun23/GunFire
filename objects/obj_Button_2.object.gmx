@@ -32,8 +32,8 @@ creater=noone;
 
 event=ev_user0;
 colour=c_gray;
-width=120;
-height=32;
+width=120*2;
+height=64;
 </string>
           </argument>
         </arguments>

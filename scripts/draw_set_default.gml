@@ -1,3 +1,4 @@
+///draw_set_defualt()
 draw_set_colour(c_white);
 draw_set_alpha(1);
 draw_set_font(fnt_12);

@@ -32,8 +32,8 @@ creater=noone;
 
 
 colour=c_black;
-width=120;
-height=32;
+width=120*2;
+height=64;
 caption="";
 </string>
           </argument>
