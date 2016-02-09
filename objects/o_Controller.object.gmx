@@ -140,7 +140,7 @@ map_load(global.lastmap);
           <argument>
             <kind>1</kind>
             <string>///Winning
-/*if (global.ct_no&lt;=0)
+if (global.ct_no&lt;=0)
 {
 to_draw="Terr Wins!";
 count++;
@@ -193,7 +193,7 @@ room_goto(rm_menu);
 }
 }
 
-*/
+//*/
 
 if (instance_exists(obj_Player))
 if (os_type==os_windows)
@@ -627,7 +627,7 @@ if (reloading==true)
 {
 if (ds_grid_get(weapondata,1,1)&gt;0){
 draw_set_alpha(0.65);
-draw_rectangle_colour((x-100)-view_xview,(y-140)-view_yview,(x+(ds_grid_get(weapondata,ItemDat[weapondata,10],2)/ItemDat[weaponid,4])*100)-view_xview,(y-100)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,0);
+draw_rectangle_colour((x-100)-view_xview,(y-140)-view_yview,(x+(ds_grid_get(weapondata,ItemDat[weapondata,10],2)/ItemDat[weaponid,4])*200)-view_xview,(y-100)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,0);
 draw_set_alpha(1);
 draw_rectangle_colour((x-100)-view_xview,(y-140)-view_yview,(x+200)-view_xview,(y-100)-view_yview,c_yellow,c_yellow,c_yellow,c_yellow,1);
 }

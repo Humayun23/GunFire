@@ -80,9 +80,10 @@ event_inherited();
             <string>
 if (instance_exists(o_UI_Max)) exit;///Excute action;
 image_blend = color_click;
-if (show_question("Are you sure?"))
+if (show_question("Are you sure?")){
 game_end();
 
+}
 
 </string>
           </argument>

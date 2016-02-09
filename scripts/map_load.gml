@@ -34,11 +34,11 @@ return -1;
 //first code
 version = buffer_read(buff,buffer_u16);
 show_debug_message(version);
-if (version<110 or version>1000) //if old map -not recommanded"
+if (version<map_supporting_code or version>1000) //if old map -not recommanded"
 {
-con_add("Old Map!",c_red);
-show_message("Old map and not supported!");
+con_add("Old Map! ver:"+string(version),c_red);
 buffer_delete(buff);
+show_message("Old map and not supported!");
 //map_load_old(_dir);
 return -1;
 exit;

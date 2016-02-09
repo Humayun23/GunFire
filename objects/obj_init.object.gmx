@@ -42,7 +42,7 @@ instance_create(xx,yy,obj_ground);
 if (instance_exists(o_CTSpawn))
 instance_create(o_CTSpawn.x,o_CTSpawn.y,obj_Player);
 
-/*if (instance_exists(o_CTSpawn)){
+if (instance_exists(o_CTSpawn)){
 repeat (ds_map_find_value(global.settings_map,"ctbots")){
 with instance_create(o_CTSpawn.x,o_CTSpawn.y,obj_ai_unit) team=0;
 global.ct_no+=1;}

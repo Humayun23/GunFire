@@ -117,7 +117,7 @@ for( DeviceNum = 0; DeviceNum &lt;=4; DeviceNum += 1; )
     { // position_meeting( MouseX[DeviceNum], MouseY[DeviceNum], self)
         if( distance_to_point(MouseX[DeviceNum], MouseY[DeviceNum])&lt;30)
         {
-        if (point_distance(xx,yy,MouseX[DeviceNum],MouseY[DeviceNum])&lt;100)
+        if (point_distance(xx,yy,MouseX[DeviceNum],MouseY[DeviceNum])&lt;200)
           {
       //    sprite_index=spr_btbullet
           speed=0;

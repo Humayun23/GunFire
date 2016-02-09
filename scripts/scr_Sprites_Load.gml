@@ -79,9 +79,9 @@ spr_msgbox= sprite_add(dir+"/msgbox.png",0,0,0,0,0);
 
 spr_player_0 = sprite_add(dir+"/player_0.png",3,0,0,14*2,16*2);
 
-spr_player_1= sprite_add(dir+"/player_1.png",3,0,0,14,16);
+spr_player_1= sprite_add(dir+"/player_1.png",3,0,0,14*2,16*2);
 
-spr_player_2= sprite_add(dir+"/player_2.png",3,0,0,14,16);
+spr_player_2= sprite_add(dir+"/player_2.png",3,0,0,14*2,16*2);
 
 spr_pointer= sprite_add(dir+"/pointer.png",0,0,0,0,0);
 set_center_origin(spr_pointer );

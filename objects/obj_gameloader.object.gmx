@@ -291,7 +291,7 @@ alarm[1]=10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>angle+=5;
+            <string>angle+=15;
 </string>
           </argument>
         </arguments>
@@ -320,13 +320,13 @@ draw_set_colour(c_white);
 draw_set_alpha(1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text(room_width/2,(room_height/2)+100,text);
+draw_text(room_width/2,(room_height/2)+200,text);
 draw_set_blend_mode(bm_add);
 draw_sprite_ext(spr_bar,-1,room_width/2,(room_height/2),1,1,angle,c_white,1);
 draw_set_alpha(0.5);
-draw_sprite_stretched(spr_loader,-1,(room_width/2)-200,(room_height/2)+50,400,15);
+draw_sprite_stretched(spr_loader,-1,(room_width/2)-400,(room_height/2)+100,800,30);
 draw_set_alpha(1);
-draw_sprite_stretched(spr_loader,-1,(room_width/2)-200,(room_height/2)+50,(loaded/100)*400,15);
+draw_sprite_stretched(spr_loader,-1,(room_width/2)-400,(room_height/2)+100,(loaded/100)*800,30);
 draw_set_blend_mode(bm_normal);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

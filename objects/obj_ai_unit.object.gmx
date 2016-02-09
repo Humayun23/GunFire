@@ -36,9 +36,11 @@ last_hitter_name="";
 team=-1;
 can_shoot=true;
 weaponid=irandom(4)+1;
-sprite_index=spr_player_2;
+sprite_index=spr_player_1;
 image_speed=0;
 mask_index=spr_mask;
+
+if (!audio_is_playing(snd_moveout)) audio_play_sound(snd_moveout,0,0);
 
 foot_index=random(7);
 randomize();
@@ -123,26 +125,6 @@ script_addline(name+" Killed by:"+string(killed_by));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>dir = point_direction(xprevious,yprevious,x,y);
 spd = point_distance(xprevious,yprevious,x,y);
 
@@ -172,7 +154,7 @@ if (team==0)
 sprite_index=spr_player_0;
 }
 else
-sprite_index=spr_terr_0;;
+sprite_index=spr_player_1;
 </string>
           </argument>
         </arguments>

@@ -232,7 +232,7 @@ view_yview[0] = y - (view_hview[0] / 2);
 if (global.move==true)
 {
 direction=point_direction(obj_RoundButton.xx,obj_RoundButton.yy,obj_RoundButton.x,obj_RoundButton.y)
-speed=(4/fps)*room_speed;
+speed=(6/fps)*room_speed;
 }
 else
 speed=0;
@@ -240,7 +240,7 @@ speed=0;
 sprite_index=global.player_sprite;
 if (speed&gt;0)
 {
-foot_index+=speed/8;
+foot_index+=speed/12;
 }
 if (foot_index&gt;7)
 foot_index=0;

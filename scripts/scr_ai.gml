@@ -19,10 +19,13 @@ if random(1) < 0.1
             var3 = instance_nth_nearest(x,y,obj_ai_par,var1)
             if var3.team != team
                 {
-                if point_distance(x,y,var3.x,var3.y) > 300
+                if point_distance(x,y,var3.x,var3.y) > 600
                     break
-                else
+                else{
                     target = var3
+                    if (irandom(100)==50)
+                    audio_play_sound(snd_enemy_spoted,0,0);
+                    }
                 break
                 }
             }
@@ -39,7 +42,7 @@ if random(1) < 0.1
                 var3 = instance_nth_nearest(x,y,obj_ai_par,var1)
                 if var3.team != team && collision_line(x,y,var3.x,var3.y,oSolid,0,0) < 0
                     {
-                    if point_distance(x,y,var3.x,var3.y) > 300
+                    if point_distance(x,y,var3.x,var3.y) > 600
                         break
                     else
                         target = var3
@@ -86,9 +89,9 @@ if target != -1
     if hp >= target.hp/2 || hp > 50
         {
         //Move to the target, and stay within a certain distance whilst maintaining a buffer
-        if point_distance(x,y,target.x,target.y) > 128*2 || collision_line(x,y,target.x,target.y,oSolid,0,0) > 0
+        if point_distance(x,y,target.x,target.y) > 256*2 || collision_line(x,y,target.x,target.y,oSolid,0,0) > 0
             mp_potential_step_object(target.x,target.y,3,oSolid)
-        if point_distance(x,y,target.x,target.y) < 128 && collision_line(x,y,target.x,target.y,oSolid,0,0) < 0
+        if point_distance(x,y,target.x,target.y) < 256 && collision_line(x,y,target.x,target.y,oSolid,0,0) < 0
             mp_potential_step_object(target.x,target.y,-3,oSolid)
         }
     else
